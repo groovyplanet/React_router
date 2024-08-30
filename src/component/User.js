@@ -10,19 +10,16 @@ function User(){
   //2.useSearchParams() 훅을 사용
 
   const [obj,setObj]= useSearchParams();
-  console.log(obj); // 값을 얻을 수 있음 // reqeust.getParameter() 동일
+  console.log(obj); // 값을 얻을 수 있음 
   console.log(setObj); // URI 값을 강제로 변경이 가능함
 
-  let name = obj.get("name"); // name 키를 얻음
+  let name = obj.get("name"); // name 키를 얻음 // reqeust.getParameter() 동일
   let age = obj.get("age"); //age 키를 얻음
   console.log("전달된 파라미터 : ", name , age);
   
   const handleClick = () => {
     setObj({name : '이순신' , age : '30'})
   }
-  
-    
-  
     
   return(
     <>
